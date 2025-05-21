@@ -40,7 +40,7 @@ resource "aws_ecs_task_definition" "back-task" {
   container_definitions = jsonencode([
     {
       name      = "backend"
-      image     = "545009827818.dkr.ecr.us-east-1.amazonaws.com/backend:latest"
+      image     = "656154105519.dkr.ecr.us-east-1.amazonaws.com/backend:latest"
       cpu       = 256
       memory    = 512
       essential = true
@@ -53,7 +53,7 @@ resource "aws_ecs_task_definition" "back-task" {
       ]
 
       environment = [
-        { name = "DB_HOST", value = "book-rds.c1u4kewc6r37.ap-south-1.rds.amazonaws.com" },
+        { name = "DB_HOST", value = "book-rds.cw9yuwcswi4u.us-east-1.rds.amazonaws.com" },
         { name = "PORT", value = "3306" },
         { name = "DB_USERNAME", value = "admin" },
         { name = "DB_PASSWORD", value = "veeranarni" }
